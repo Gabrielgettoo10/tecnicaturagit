@@ -1,0 +1,17 @@
+#Ejercicio 5: Calcular el factorial de un número mayor o igual a 0
+def factorial(n):
+    if n < 0:
+        return "El número debe ser mayor o igual a 0"
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        resultado = 1
+        for i in range(2, n + 1):
+            resultado *= i
+        return resultado
+
+numero = int(input("Ingrese un número mayor o igual a 0: "))
+
+resultado = factorial(numero)
+
+print(f"El factorial de {numero} es {resultado}")

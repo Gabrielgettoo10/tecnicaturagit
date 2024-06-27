@@ -1,0 +1,22 @@
+#Ejercicio 7: Dadas las horas trabajadas de 5 personas y la tarifa de pago, calcular el salario y la sumatoria
+#de todos los salarios
+def main():
+    #Inicializa variables
+    total_salarios = 0
+    numero_trabajadores = 5
+
+    #Solicita la tarifa de pago
+    tarifa = float(input("Ingrese la tarifa de pago por hora: "))
+
+    #Lee y procesa las horas trabajadas de cada persona
+    for i in range(1, numero_trabajadores + 1):
+        horas_trabajadas = float(input(f"Ingrese las horas trabajadas de la persona {i}: "))
+        salario = horas_trabajadas * tarifa
+        total_salarios += salario
+        print(f"El salario de la persona {i} es: ${salario:.2f}")
+
+    #Muestra la sumatoria de todos los salarios
+    print(f"La sumatoria de todos los salarios es: ${total_salarios:.2f}")
+
+if __name__ == "__main__":
+    main()

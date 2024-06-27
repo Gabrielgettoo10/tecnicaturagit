@@ -1,0 +1,36 @@
+#Ejercicio 6: Ingresar "N" enteros, visualizar la suma de los números pares de las lista, cuántos números pares
+#existen y cuál es el promedio  de los números impares
+def main():
+    # Leer el número de enteros que se desea ingresar
+    N = int(input("Ingrese la cantidad de números: "))
+
+    #Inicializa las variables
+    suma_pares = 0
+    conteo_pares = 0
+    suma_impares = 0
+    conteo_impares = 0
+
+    #Lee y procesa los números
+    for i in range(N):
+        num = int(input(f"Ingrese el número {i + 1}: "))
+
+        if num % 2 == 0:
+            suma_pares += num
+            conteo_pares += 1
+        else:
+            suma_impares += num
+            conteo_impares += 1
+
+    #Calcula el promedio de los números impares
+    if conteo_impares > 0:
+        promedio_impares = suma_impares / conteo_impares
+    else:
+        promedio_impares = 0
+
+    #Muestra los resultados
+    print(f"Suma de los números pares: {suma_pares}")
+    print(f"Cantidad de números pares: {conteo_pares}")
+    print(f"Promedio de los números impares: {promedio_impares:}")
+
+if __name__ == "__main__":
+    main()
